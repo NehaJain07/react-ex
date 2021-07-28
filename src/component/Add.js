@@ -11,7 +11,7 @@ export default function Add(props) {
    const handleAdd=(e)=>{
        e.preventDefault();
        console.log(info);
-    fetch('http://localhost:8080/posts',{
+    fetch('https://github.com/NehaJain07/userJson',{
         method:'POST',
         body: JSON.stringify(info),
         headers: {'Content-Type': 'application/json'}

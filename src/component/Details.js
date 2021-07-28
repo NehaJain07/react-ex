@@ -6,7 +6,7 @@ export default function Blog(props) {
     const history=useHistory();
 
      useEffect(()=>{
-       fetch('http://localhost:8080/posts/'+props.match.params.id)
+       fetch('https://github.com/NehaJain07/userJson/'+props.match.params.id)
        .then(res =>{
          return res.json()
         })
@@ -15,14 +15,14 @@ export default function Blog(props) {
       setBlogDet(data)
         }); 
         /* (async() => {
-            const res = await fetch('http://localhost:8080/posts'+props.match.params.id);
+            const res = await fetch('https://github.com/NehaJain07/userJson'+props.match.params.id);
             const data = await res.json();
             setBlogDet(data);
         })() */
    },[props.match.params.id])
    
    const handleDelete=()=>{
-    fetch('http://localhost:8080/posts/'+props.match.params.id,{
+    fetch('https://github.com/NehaJain07/userJson/'+props.match.params.id,{
         method:'Delete'
     })
     .then(() =>{

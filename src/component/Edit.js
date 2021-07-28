@@ -6,7 +6,7 @@ export default function Edit(props) {
     const[info, setInfo]=useState({title:'', body:'', likes:''});
     const history=useHistory();
      useEffect(()=>{
-       fetch('http://localhost:8080/posts/'+props.match.params.id)
+       fetch('https://github.com/NehaJain07/userJson/'+props.match.params.id)
        .then(res =>{
          return res.json()
         })
@@ -15,7 +15,7 @@ export default function Edit(props) {
       setInfo(data)
         }); 
         /* (async() => {
-            const res = await fetch('http://localhost:8080/posts'+props.match.params.id);
+            const res = await fetch('https://github.com/NehaJain07/userJson'+props.match.params.id);
             const data = await res.json();
             setinfo(data);
         })() */
@@ -27,7 +27,7 @@ export default function Edit(props) {
    const handleUpdate=(e)=>{
        e.preventDefault();
        console.log(info);
-    fetch('http://localhost:8080/posts/'+props.match.params.id,{
+    fetch('https://github.com/NehaJain07/userJson/'+props.match.params.id,{
         method:'PUT',
         body: JSON.stringify(info),
         headers: {'Content-Type': 'application/json'}

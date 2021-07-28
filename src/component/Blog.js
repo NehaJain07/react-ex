@@ -6,7 +6,7 @@ export default function Blog() {
     const[error, setError]=useState();
      useEffect(()=>{
        setTimeout(()=>{  
-        fetch('http://localhost:8080/posts')
+        fetch('https://github.com/NehaJain07/userJson')
        .then(res =>{
          if(!res.ok){
            throw Error('Could not fetch the data for that resource')
@@ -25,7 +25,7 @@ export default function Blog() {
         })
       }, 500)
         /* (async() => {
-            const res = await fetch('http://localhost:8080/posts');
+            const res = await fetch('https://github.com/NehaJain07/userJson');
             const data = await res.json();
             setBlogs(data);
         })() */
