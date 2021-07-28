@@ -11,7 +11,7 @@ export default function Add(props) {
    const handleAdd=(e)=>{
        e.preventDefault();
        console.log(info);
-    fetch('https://github.com/NehaJain07/userJson',{
+    fetch('https://my-json-server.typicode.com/NehaJain07/userJson/posts',{
         method:'POST',
         body: JSON.stringify(info),
         headers: {'Content-Type': 'application/json'}
