@@ -22,7 +22,7 @@ export default function Blog(props) {
    },[props.match.params.id])
    
    const handleDelete=()=>{
-    fetch('https://github.com/NehaJain07/userJson/'+props.match.params.id,{
+    fetch('https://my-json-server.typicode.com/NehaJain07/userJson/posts/'+props.match.params.id,{
         method:'Delete'
     })
     .then(() =>{
