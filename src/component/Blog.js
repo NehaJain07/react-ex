@@ -6,7 +6,7 @@ export default function Blog() {
     const[error, setError]=useState();
      useEffect(()=>{
        setTimeout(()=>{  
-        fetch('https://my-json-server.typicode.com/NehaJain07/userJson/posts')
+        fetch('https://my-react-json.herokuapp.com/posts')
        .then(res =>{
          if(!res.ok){
            throw Error('Could not fetch the data for that resource')
@@ -25,7 +25,7 @@ export default function Blog() {
         })
       }, 500)
         /* (async() => {
-            const res = await fetch('https://my-json-server.typicode.com/NehaJain07/userJson/posts');
+            const res = await fetch('https://my-react-json.herokuapp.com/posts');
             const data = await res.json();
             setBlogs(data);
         })() */

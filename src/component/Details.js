@@ -6,7 +6,7 @@ export default function Blog(props) {
     const history=useHistory();
 
      useEffect(()=>{
-       fetch('https://my-json-server.typicode.com/NehaJain07/userJson/posts/'+props.match.params.id)
+       fetch('https://my-react-json.herokuapp.com/posts/'+props.match.params.id)
        .then(res =>{
          return res.json()
         })
@@ -22,7 +22,7 @@ export default function Blog(props) {
    },[props.match.params.id])
    
    const handleDelete=()=>{
-    fetch('https://my-json-server.typicode.com/NehaJain07/userJson/posts/'+props.match.params.id,{
+    fetch('https://my-react-json.herokuapp.com/posts/'+props.match.params.id,{
         method:'Delete'
     })
     .then(() =>{
